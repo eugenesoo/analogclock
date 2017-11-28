@@ -10,7 +10,7 @@
 .clock {
   width: 270px;
   height: 270px;
-  border-radius: 50%;
+  border-radius: 20%;
   background: #ffffff;
   margin: 15px;
   position: absolute;
@@ -19,22 +19,73 @@
 }
 
 .clockNums {
-  width: 1.5em;
   text-align: center;
-  margin: auto;
+  margin: 10% 10%;
 }
 
-.clockuncenter {
-  margin: 12px auto;
-  clear: both;
+.firstRow {
+  margin-top: 2.5%;
 }
 
-.rightfloat {
+.clockNumsWide {
+  margin: 10% 0%;
+}
+
+.nums {
+  display: inline-block;
+  width: 2em;
+}
+
+.rightNums {
   float: right;
 }
 
-.leftfloat {
+.leftNums {
   float: left;
+}
+
+.clear {
+  clear: both;
+}
+
+#middle {
+  position: absolute;
+  left: 47.5%;
+  top: 47.5%;
+  width:5%;
+  height: 5%;
+  border-radius: 50%;
+  background: #E16F7C;
+  z-index: 2;
+}
+#hour {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 20%;
+  border: 3px solid black;
+  z-index: 1;
+  margin: auto;
+  animation-name: rotation;
+  animation-duration: 216000s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-delay: -162000s;
+  transform-origin: 0;
+}
+
+#minutes {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 30%;
+  border: 2px solid black;
+  z-index: 1;
+  margin: auto;
+  animation-name: rotation;
+  animation: rotate 3600s infinite steps(60);
+  animation-delay: -2700s;
+  transform-origin: 0;
 }
 
 #seconds {
@@ -45,12 +96,10 @@
   border: 1px solid black;
   z-index: 1;
   margin: auto;
+  animation: rotate 60s infinite steps(60);
   animation-name: rotation;
-  animation-duration: 60s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
+  animation-delay: -45s;
   transform-origin: 0;
-  transform: rotate(54deg);
 }
 
 @keyframes rotation {
@@ -60,38 +109,4 @@
   to {
     transform: rotate(360deg)
   }
-}
-
-#twelve {
-}
-
-#six {
-}
-
-#one, #five {
-  margin-right: 20%;
-}
-
-#eleven, #seven {
-  margin-left: 20%;
-}
-
-#two, #four {
-  margin-right: 7%;
-}
-
-#ten, #eight {
-  margin-left: 7%;
-}
-
-#three {
-  margin-right: 2%;
-}
-
-#nine {
-  margin-left: 2%;
-}
-
-.clear {
-  clear: both;
 }
