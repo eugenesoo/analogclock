@@ -1,0 +1,14 @@
+{
+  "name": "analogclock",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/eugenesoo/analogclock.git",
+  "author": "Eugene Soo <eugene@soo.sg>",
+  "license": "MIT",
+  "scripts": {
+    "start": "live-server"
+  },
+  "dependencies": {
+    "live-server": "^1.2.0"
+  }
+}

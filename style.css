@@ -1,0 +1,97 @@
+.clockbg {
+  background: rgba(200,200,200,0.9);
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  border-radius: 15px;
+  position: relative;
+}
+
+.clock {
+  width: 270px;
+  height: 270px;
+  border-radius: 50%;
+  background: #ffffff;
+  margin: 15px;
+  position: absolute;
+  font-family: verdana;
+  font-size: 25px;
+}
+
+.clockNums {
+  width: 1.5em;
+  text-align: center;
+  margin: auto;
+}
+
+.clockuncenter {
+  margin: 12px auto;
+  clear: both;
+}
+
+.rightfloat {
+  float: right;
+}
+
+.leftfloat {
+  float: left;
+}
+
+#seconds {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width:40%;
+  border: 1px solid black;
+  z-index: 1;
+  margin: auto;
+  animation-name: rotation;
+  animation-duration: 60s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-origin: 0;
+  transform: rotate(54deg);
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0)
+  }
+  to {
+    transform: rotate(360deg)
+  }
+}
+
+#twelve {
+}
+
+#six {
+}
+
+#one, #five {
+  margin-right: 20%;
+}
+
+#eleven, #seven {
+  margin-left: 20%;
+}
+
+#two, #four {
+  margin-right: 7%;
+}
+
+#ten, #eight {
+  margin-left: 7%;
+}
+
+#three {
+  margin-right: 2%;
+}
+
+#nine {
+  margin-left: 2%;
+}
+
+.clear {
+  clear: both;
+}
